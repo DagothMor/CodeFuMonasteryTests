@@ -1,9 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using AlgorithmsDataStructures;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CodeFuMonastery;
 
 namespace MSTest
 {
@@ -24,7 +23,7 @@ namespace MSTest
             stackFirst.Push(4);
             stackFirst.Push(5);
             stackFirst.Push(6);
-
+            
 
             stackSecond.Push(2);
             stackSecond.Push(3);
@@ -46,8 +45,8 @@ namespace MSTest
             twoStacksQueue.Enqueue(5);
             twoStacksQueue.Enqueue(6);
 
-            Assert.AreEqual(1, queue.Dequeue());
-            Assert.AreEqual(2, queue.Dequeue());
+            Assert.AreEqual(1,queue.Dequeue());
+            Assert.AreEqual(2,queue.Dequeue());
             Assert.AreEqual(3, queue.Dequeue());
             Assert.AreEqual(4, queue.Dequeue());
             Assert.AreEqual(5, queue.Dequeue());
