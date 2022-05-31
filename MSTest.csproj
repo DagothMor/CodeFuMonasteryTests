@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="LinkedListUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PowerSetUnitTests.cs" />
+    <Compile Include="TwoStackQueueUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
