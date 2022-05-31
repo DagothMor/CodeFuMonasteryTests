@@ -79,10 +79,16 @@ namespace MSTest
             isSubSetPowerSetTestLess.Put("a");
             isSubSetPowerSetTestLess.Put("b");
 
+            var emptyPowerSet = new PowerSet<string>();
 
             Assert.IsFalse(isSubSetPowerSetTest.IsSubset(isSubSetPowerSetTestBigger));
             Assert.IsTrue(isSubSetPowerSetTest.IsSubset(isSubSetPowerSetTestEqual));
             Assert.IsTrue(isSubSetPowerSetTest.IsSubset(isSubSetPowerSetTestLess));
+
+            Assert.IsTrue(emptyPowerSet.IsSubset(emptyPowerSet));
+            Assert.IsTrue(emptyPowerSet.IsSubset(isSubSetPowerSetTestBigger));
+            Assert.IsTrue(emptyPowerSet.IsSubset(isSubSetPowerSetTestEqual));
+            Assert.IsTrue(emptyPowerSet.IsSubset(isSubSetPowerSetTestLess));
 
         }
     }
