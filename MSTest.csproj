@@ -49,10 +49,20 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloomFilterUnitTest.cs" />
+    <Compile Include="OrderedListUnitTest.cs" />
+    <Compile Include="PowerSetUnitTest.cs" />
+    <Compile Include="TwoStackQueueUnitTest.cs" />
+    <Compile Include="DequeUnitTest.cs" />
+    <Compile Include="DinArrayUnitTest.cs" />
+    <Compile Include="DummyLinkedList2UnitTest.cs" />
+    <Compile Include="LinkedList2UnitTest.cs" />
     <Compile Include="LinkedListUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PowerSetUnitTests.cs" />
     <Compile Include="TwoStackQueueUnitTest.cs" />
+    <Compile Include="QueueUnitTest.cs" />
+    <Compile Include="StackUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
