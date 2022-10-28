@@ -9,9 +9,52 @@ namespace MSTest
     public class BSTUnitTest
     {
 		[TestMethod]
+		public void BFSAndDFS()
+		{
+			var test1aBST = new aBST(0);
+			var test2aBST = new aBST(1);
+			var test3aBST = new aBST(2);
+			var test4aBST = new aBST(3);
+			var test5aBST = new aBST(4);
+
+			Assert.AreEqual(1,test1aBST.Tree.Length);
+			Assert.AreEqual(3, test2aBST.Tree.Length);
+			Assert.AreEqual(7, test3aBST.Tree.Length);
+			Assert.AreEqual(15, test4aBST.Tree.Length);
+			Assert.AreEqual(31, test5aBST.Tree.Length);
+
+			Assert.AreEqual(0, test4aBST.AddKey(50));
+			Assert.AreEqual(1, test4aBST.AddKey(25));
+			Assert.AreEqual(2, test4aBST.AddKey(75));
+			Assert.AreEqual(null, test4aBST.Tree[3]);
+			Assert.AreEqual(4, test4aBST.AddKey(37));
+			Assert.AreEqual(5, test4aBST.AddKey(62));
+			Assert.AreEqual(6, test4aBST.AddKey(84));
+			Assert.AreEqual(null, test4aBST.Tree[7]);
+			Assert.AreEqual(null, test4aBST.Tree[8]);
+			Assert.AreEqual(9, test4aBST.AddKey(31));
+			Assert.AreEqual(10, test4aBST.AddKey(43));
+			Assert.AreEqual(11, test4aBST.AddKey(55));
+			Assert.AreEqual(null, test4aBST.Tree[12]);
+			Assert.AreEqual(null, test4aBST.Tree[13]);
+			Assert.AreEqual(14, test4aBST.AddKey(92));
+			Assert.AreEqual(14, test4aBST.AddKey(92));
+
+			Assert.AreEqual(-1, test4aBST.AddKey(93));
+			Assert.AreEqual(-1, test4aBST.AddKey(94));
+
+			Assert.AreEqual(null, test4aBST.FindKeyIndex(93));
+			Assert.AreEqual(14, test4aBST.FindKeyIndex(92));
+			Assert.AreEqual(0, test4aBST.FindKeyIndex(50));
+			Assert.AreEqual(-3, test4aBST.FindKeyIndex(24));
+
+
+
+		}
+			[TestMethod]
 		public void AddChildTest()
 		{
-
+			//____
 			//____
 			var bstTree = new BST<int>();
 			var zeronotfound = bstTree.FindNodeByKey(0);

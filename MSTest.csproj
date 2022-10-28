@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aBSTUnitTest.cs" />
     <Compile Include="BloomFilterUnitTest.cs" />
     <Compile Include="BSTUnitTest.cs" />
     <Compile Include="OrderedListUnitTest.cs" />
