@@ -291,5 +291,64 @@ namespace MSTest
 			Assert.IsTrue(a2.Children.Contains(a6));
 
 		}
+
+		[TestMethod]
+		public void EvenForestTest()
+		{
+
+
+			var a1 = new SimpleTreeNode<int>(1);
+			var a2 = new SimpleTreeNode<int>(2);
+			var a3 = new SimpleTreeNode<int>(3);
+			var a4 = new SimpleTreeNode<int>(4);
+			var a5 = new SimpleTreeNode<int>(5);
+			var a6 = new SimpleTreeNode<int>(6);
+			var a7 = new SimpleTreeNode<int>(7);
+			var a8 = new SimpleTreeNode<int>(8);
+			var a9 = new SimpleTreeNode<int>(9);
+			var a10 = new SimpleTreeNode<int>(10);
+
+			var ASimpleTree = new SimpleTree<int>(a1);
+
+			ASimpleTree.AddChild(a1, a2);
+			ASimpleTree.AddChild(a1, a3);
+			ASimpleTree.AddChild(a1, a4);
+			ASimpleTree.AddChild(a2, a5);
+			ASimpleTree.AddChild(a4, a7);
+			ASimpleTree.AddChild(a3, a6);
+			ASimpleTree.AddChild(a4, a8);
+			ASimpleTree.AddChild(a5, a9);
+			ASimpleTree.AddChild(a5, a10);
+
+			var res = ASimpleTree.EvenTrees();
+
+			var b1 = new SimpleTreeNode<int>(1);
+			var b2 = new SimpleTreeNode<int>(2);
+			var b3 = new SimpleTreeNode<int>(3);
+			var b4 = new SimpleTreeNode<int>(4);
+			var b5 = new SimpleTreeNode<int>(5);
+			var b6 = new SimpleTreeNode<int>(6);
+			var b7 = new SimpleTreeNode<int>(7);
+			var b8 = new SimpleTreeNode<int>(8);
+			var b9 = new SimpleTreeNode<int>(9);
+			var b10 = new SimpleTreeNode<int>(10);
+
+			var bSimpleTree = new SimpleTree<int>(b1);
+
+			bSimpleTree.AddChild(b1, b2);
+			bSimpleTree.AddChild(b1, b3);
+			bSimpleTree.AddChild(b1, b6);
+			bSimpleTree.AddChild(b2, b5);
+			bSimpleTree.AddChild(b2, b7);
+			bSimpleTree.AddChild(b3, b4);
+			bSimpleTree.AddChild(b6, b8);
+			bSimpleTree.AddChild(b7, b9);
+			bSimpleTree.AddChild(b7, b10);
+
+			var resb = bSimpleTree.EvenTrees();
+
+			var keke = "";
+
 		}
+	}
 	}
