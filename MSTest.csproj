@@ -62,6 +62,7 @@
     <Compile Include="NewBalancedBSTUnitTest.cs" />
     <Compile Include="OrderedListUnitTest.cs" />
     <Compile Include="PowerSetUnitTest.cs" />
+    <Compile Include="SimpleGraphUnitTest.cs" />
     <Compile Include="SimpleTreeUnitTest.cs" />
     <Compile Include="TwoStackQueueUnitTest.cs" />
     <Compile Include="DequeUnitTest.cs" />
