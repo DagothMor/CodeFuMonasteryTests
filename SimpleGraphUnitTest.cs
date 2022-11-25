@@ -23,21 +23,21 @@ namespace MSTest
             sg1.AddVertex(7);
             sg1.AddVertex(8);
 
-            sg1.AddEdge(0,1);
-            sg1.AddEdge(0,2);
-            sg1.AddEdge(0,3);
-            sg1.AddEdge(1,3);
-            sg1.AddEdge(2,3);
-            sg1.AddEdge(3,4);
-            sg1.AddEdge(2,7);
-            sg1.AddEdge(4,5);
-            sg1.AddEdge(4,6);
+            sg1.AddEdge(0, 1);
+            sg1.AddEdge(0, 2);
+            sg1.AddEdge(0, 3);
+            sg1.AddEdge(1, 3);
+            sg1.AddEdge(2, 3);
+            sg1.AddEdge(3, 4);
+            sg1.AddEdge(2, 7);
+            sg1.AddEdge(4, 5);
+            sg1.AddEdge(4, 6);
 
-            var way1 = sg1.DepthFirstSearch(0,6);
-            
+            var way1 = sg1.DepthFirstSearch(0, 6);
 
-            sg1.RemoveEdge(3,4);
-            
+
+            sg1.RemoveEdge(3, 4);
+
             var way2 = sg1.DepthFirstSearch(0, 6);
 
             var way3 = sg1.DepthFirstSearch(0, 7);
@@ -46,6 +46,40 @@ namespace MSTest
             var way4 = sg1.DepthFirstSearch(0, 7);
             var keke = "";
         }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            var sg1 = new SimpleGraph<int>(9);
+            sg1.AddVertex(1);
+            sg1.AddVertex(2);
+            sg1.AddVertex(3);
+            sg1.AddVertex(4);
+            sg1.AddVertex(5);
+            sg1.AddVertex(6);
+            sg1.AddVertex(7);
+            sg1.AddVertex(8);
+            sg1.AddVertex(9);
 
+            sg1.AddEdge(0, 1);
+            sg1.AddEdge(0, 2);
+            sg1.AddEdge(0, 3);
+
+            sg1.AddEdge(1, 3);
+            sg1.AddEdge(2, 3);
+
+            sg1.AddEdge(1, 4);
+            sg1.AddEdge(3, 5); 
+            sg1.AddEdge(4, 5);
+
+            sg1.AddEdge(5, 6);
+            sg1.AddEdge(5, 7);
+            sg1.AddEdge(6, 7);
+
+            sg1.AddEdge(7, 8);
+
+            var way4 = sg1.WeakVertices();
+            var keke = "";
+
+        }
     }
 }

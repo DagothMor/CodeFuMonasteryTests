@@ -320,7 +320,7 @@ namespace MSTest
 			ASimpleTree.AddChild(a5, a9);
 			ASimpleTree.AddChild(a5, a10);
 
-			var res = ASimpleTree.EvenTrees();
+			var resa = ASimpleTree.EvenTrees();
 
 			var b1 = new SimpleTreeNode<int>(1);
 			var b2 = new SimpleTreeNode<int>(2);
@@ -346,6 +346,24 @@ namespace MSTest
 			bSimpleTree.AddChild(b7, b10);
 
 			var resb = bSimpleTree.EvenTrees();
+
+			var c1 = new SimpleTreeNode<int>(1);
+			var c2 = new SimpleTreeNode<int>(2);
+			var c3 = new SimpleTreeNode<int>(3);
+			var c4 = new SimpleTreeNode<int>(4);
+			var c5 = new SimpleTreeNode<int>(5);
+			var c6 = new SimpleTreeNode<int>(6);
+			var c7 = new SimpleTreeNode<int>(7);
+			var c8 = new SimpleTreeNode<int>(8);
+			var c9 = new SimpleTreeNode<int>(9);
+			var c10 = new SimpleTreeNode<int>(10);
+
+			var cSimpleTree = new SimpleTree<int>(c1);
+
+			cSimpleTree.AddChild(c1, c2);
+			cSimpleTree.AddChild(c2, c3);
+
+			var resc = cSimpleTree.EvenTrees();
 
 			var keke = "";
 
